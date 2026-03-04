@@ -1,1 +1,114 @@
-/* =========================== Header =========================== */ .header { background: #C60010; color: #fff; padding: 20px; } .header-title { display: flex; flex-direction: column; margin-bottom: 20px; } .header-title h1, .header-title p { margin: 0; padding: 0; } .header-subtitle { font-size: 18px; opacity: 0.9; letter-spacing: 1px; } /* Navigation */ .nav { display: flex; gap: 20px; } .nav a { color: white; text-decoration: none; font-weight: 500; } /* =========================== Hero Section =========================== */ .hero { width: 100%; height: 300px; /* hero 기본 높이 */ background: url("images/hero.jpg") center/cover no-repeat; position: relative; } .hero-text { position: absolute; bottom: 20px; left: 20px; color: white; font-size: 24px; text-shadow: 0 0 6px rgba(0,0,0,0.7); } /* =========================== Card Grid (Responsive) =========================== */ .content { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; } .card { background: #ffffff; border-radius: 8px; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } .card img { width: 100%; height: 160px; /* 이미지 없어도 박스 유지됨 */ object-fit: cover; border-radius: 8px; background: #e0e0e0; /* 이미지 없을 때 회색 박스 */ } /* =========================== Footer =========================== */ .footer { text-align: center; padding: 20px; background: #f2f2f2; margin-top: 40px; color: #333; } /* =========================== Mobile 최고 자동화 완성 =========================== */ @media (max-width: 480px) { .hero { height: 220px; } .hero-text { font-size: 20px; } }
+/* ===========================
+   Header
+=========================== */
+.header {
+  background: #C60010;
+  color: #fff;
+  padding: 20px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.header-title h1,
+.header-title p {
+  margin: 0;
+  padding: 0;
+}
+
+.header-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* ===========================
+   Hero
+=========================== */
+.hero {
+  width: 100%;
+  height: 300px;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+
+/* ===========================
+   Card Grid (Responsive)
+=========================== */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f2f2f2;
+  margin-top: 40px;
+  color: #333;
+}
+
+
+/* ===========================
+   Mobile
+=========================== */
+@media (max-width: 480px) {
+  .hero {
+    height: 220px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+}
