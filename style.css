@@ -13,7 +13,8 @@ body {
 .header-title {
   display: flex;
   flex-direction: column;
-  gap: 4px;   /* h1 과 SSDEC 사이 간격 */
+  gap: ;   /* h1 과 SSDEC 사이 간격 */
+  margin-bottom: 12px;
 }
 
 /* SSDEC 부분 스타일 */
