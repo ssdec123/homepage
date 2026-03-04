@@ -37,6 +37,30 @@
   letter-spacing: 1px;
 }
 
+/* ----- Hero 영역 ----- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 0;  /* padding 제거해야 이미지가 꽉 찬다 */
+}
+
+/* hero 이미지 반응형 처리 */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* hero 텍스트 위치 */
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
 /* ----- 카드 그리드 ----- */
 .content {
   display: grid;
