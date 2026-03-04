@@ -46,9 +46,6 @@ body {
     margin: 0 auto;
   }
 
-  .hero {
-    padding: 80px 16px;
-  }
 }
 .hero img {
   width: 100%;         /* 화면 너비에 자동 맞춤 */
