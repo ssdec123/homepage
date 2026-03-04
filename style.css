@@ -17,11 +17,7 @@ body {
 }
 
 /* 배너 같은 Hero 영역 */
-.hero {
-  padding: 40px 16px;
-  background: #eaf2ff;
-  text-align: center;
-}
+
 
 /* 카드형 콘텐츠 */
 .content {
@@ -47,10 +43,31 @@ body {
   }
 
 }
-.hero img {
-  width: 100%;         /* 화면 너비에 자동 맞춤 */
-  height: auto;        /* 비율 유지 */
-  display: block;      /* 이미지 아래 여백 제거 */
-  object-fit: cover;   /* 화면에 꽉 채움 */
+
+/* ---- Hero 배너 ---- */
+.hero {
+  width: 100%;
+  height: 260px; /* 모바일 높이 */
+  background: url("images/main.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+  align-items: flex-end; /* 텍스트 아래 배치 */
+  padding: 20px;
 }
+
+/* hero 텍스트 스타일 */
+.hero-text {
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* PC 화면 */
+@media (min-width: 768px) {
+  .hero {
+    height: 400px; /* PC 높이 */
+    padding: 40px;
+  }
+}
+
 
