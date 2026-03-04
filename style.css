@@ -48,6 +48,12 @@
   background: url("images/hero.jpg") center/cover no-repeat;
   position: relative;
 }
+.hero img {
+  width: 100%;          /* 화면 너비에 맞게 */
+  height: auto;         /* 비율 유지 */
+  display: block;       /* 여백 제거 */
+  object-fit: cover;    /* 화면에 맞게 꽉 채움 */
+}
 
 .hero-text {
   position: absolute;
