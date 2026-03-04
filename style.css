@@ -14,7 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;   /* h1 과 SSDEC 사이 간격 */
-  margin-bottom: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 /* SSDEC 부분 스타일 */
@@ -22,6 +23,7 @@ body {
   font-size: 18px;          /* 원하는 크기로 변경 */
   font-weight: 500;
   margin: 0;
+  padding: 0;
   opacity: 0.9;             /* 조금 연하게 보여주기 */
   letter-spacing: 1px;      /* 자간(간격) 조금 벌리기 */
 }
