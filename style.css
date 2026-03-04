@@ -43,10 +43,12 @@
    Hero
 =========================== */
 .hero {
+  position: relative;
   width: 100%;
   height: 300px;
   background: url("images/hero.jpg") center/cover no-repeat;
   position: relative;
+   overflow: hidden;
 }
 .hero img {
   width: 100%;          /* 화면 너비에 맞게 */
@@ -124,5 +126,23 @@
     max-width: 600px;
     margin: 0 auto;
     font-size: 18px;
+  }
+}
+
+/* 모바일 전용: img 숨기고 배경이미지로 전환 */
+@media (max-width: 768px) {
+  .hero img {
+    display: none;
+  }
+
+  .hero {
+    background: url("images/main.png") center/cover no-repeat;
+    height: 230px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    bottom: 15px;
+    left: 15px;
   }
 }
