@@ -50,3 +50,10 @@ body {
     padding: 80px 16px;
   }
 }
+.hero img {
+  width: 100%;         /* 화면 너비에 자동 맞춤 */
+  height: auto;        /* 비율 유지 */
+  display: block;      /* 이미지 아래 여백 제거 */
+  object-fit: cover;   /* 화면에 꽉 채움 */
+}
+
