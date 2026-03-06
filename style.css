@@ -110,7 +110,15 @@
   padding: 16px;
   font-size: 16px;
 }
-
+/* 햄버거 버튼 기본 숨김 (PC용) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 /* ===========================
    Mobile
 =========================== */
@@ -145,4 +153,25 @@
     bottom: 15px;
     left: 15px;
   }
+ /* 모바일: 햄버거 보이기, nav 숨기기 */
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #C60010;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  /* 햄버거 활성화 시 메뉴 표시 */
+  .nav.active {
+    display: flex;
+  }
+   
 }
