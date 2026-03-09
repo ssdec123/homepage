@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SoC 설계 교육과정 - SSDEC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="soc.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-title">
+    <h1>SoC 설계 교육과정</h1>
+    <p class="header-subtitle">System-on-Chip Design Program</p>
+  </div>
+
+  <button class="hamburger">☰</button>
+
+  <nav class="nav">
+    <a href="../index.html">센터안내</a>
+
+    <div class="menu-group">
+      <button class="menu-parent">교육과정 ▼</button>
+      <div class="submenu">
+        <a href="global.html">글로벌 반도체 교육과정</a>
+        <a href="soc.html">SoC 설계 교육과정</a>
+      </div>
+    </div>
+
+    <a href="#">메뉴3</a>
+    <a href="https://www.sogang.ac.kr">서강대학교</a>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="program-hero">
+  <h2 class="program-title">SoC 설계 교육과정</h2>
+  <p class="program-subtitle">반도체 SoC 설계의 전체 흐름을 실습 중심으로 학습하는 전문 교육 프로그램</p>
+</section>
+
+
+<!-- 교육개요 -->
+<section class="section-block">
+  <h3 class="section-title">교육 개요</h3>
+  <p class="section-text">
+    SoC 설계 교육과정은 RTL부터 합성, P&R, 타이밍 분석, ECO까지
+    실제 SoC 설계 플로우를 실습 중심으로 다루는 심화 과정입니다.
+    반도체 칩 설계 전반의 흐름을 기반으로 실무 능력을 갖춘 SoC 엔지니어 양성을 목표로 합니다.
+  </p>
+</section>
+
+
+<!-- 이 과정의 특징 -->
+<section class="section-block">
+  <h3 class="section-title">이 과정의 특징</h3>
+
+  <div class="feature-cards">
+
+    <div class="card">
+      <div class="card-icon">
+        <img src="../images/icons/soc-flow.png" alt="설계 플로우 아이콘">
+      </div>
+      <div class="card-text">
+        <h4>Full SoC Flow 실습</h4>
+        <p>RTL → 합성 → APR → STA까지 전 과정 실습</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <img src="../images/icons/chip.png" alt="칩 아이콘">
+      </div>
+      <div class="card-text">
+        <h4>최신 공정 기반 이해</h4>
+        <p>5nm/3nm 공정 기반 SoC 설계 이해</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <img src="../images/icons/tools.png" alt="EDA 툴 아이콘">
+      </div>
+      <div class="card-text">
+        <h4>EDA Tool 실습</h4>
+        <p>Synopsys / Cadence 주요 툴 실습</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <img src="../images/icons/timing.png" alt="타이밍 분석 아이콘">
+      </div>
+      <div class="card-text">
+        <h4>타이밍 분석 & ECO</h4>
+        <p>실제 칩 설계에서 사용하는 타이밍 분석 프로세스 학습</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 커리큘럼 -->
+<section class="section-block">
+  <h3 class="section-title">커리큘럼</h3>
+
+  <div class="curriculum-list">
+    <p><strong>1~2주차:</strong> RTL 설계 기초 / Verilog</p>
+    <p><strong>3~4주차:</strong> 합성(Synthesis) / Constraint 적용</p>
+    <p><strong>5~6주차:</strong> APR (Placement & Routing)</p>
+    <p><strong>7~8주차:</strong> 시그널 무결성(SI) / 전력 분석</p>
+    <p><strong>9~10주차:</strong> 타이밍 분석(STA) / ECO</p>
+    <p><strong>11~12주차:</strong> Mini SoC Project</p>
+  </div>
+</section>
+
+
+<!-- 지원 안내 -->
+<section class="section-block">
+  <h3 class="section-title">지원 안내</h3>
+  <ul class="section-text">
+    <li>지원 대상: SoC 설계 진로 희망자 또는 기초 설계 경험 보유자</li>
+    <li>모집 일정: 추후 공지</li>
+    <li>교육 장소: 서강대학교 판교캠퍼스</li>
+    <li>문의: ssdec.master@sogang.ac.kr</li>
+  </ul>
+</section>
+
+
+<footer class="footer">
+  © 2026 SSDEC
+</footer>
+
+<script>
+  const ham = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+
+  ham.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  const parentMenu = document.querySelector('.menu-parent');
+  const submenu = document.querySelector('.submenu');
+
+  if (parentMenu) {
+    parentMenu.addEventListener('click', () => {
+      submenu.classList.toggle('active');
+      parentMenu.classList.toggle('active');
+    });
+  }
+</script>
+
+</body>
+</html>

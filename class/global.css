@@ -1,9 +1,336 @@
-.program-title {
-  margin: 0;
-  padding: 0;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #C60010;
+  height: 80px; /* 헤더 높이 지정 */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* 타이틀 컨테이너 높이 100% */
+}
+
+.header-title h1 {
+  font-size: 21.5px;
   font-weight: 700;
-  white-space: nowrap;
-  word-break: keep-all;
-  font-size: clamp(20px, 5vw, 48px);
+  margin: 0;
+  line-height: 1.15;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.header-title .header-subtitle {
+  font-size: 13.6px;
+  margin: 0;
+  color: #555555;
+}
+
+.hamburger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #C60010;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin-left: auto; /* 햄버거 버튼을 오른쪽으로 밀어냄 */
+}
+
+/* ==================== NAV ==================== */
+.nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #C60010;
+}
+
+.menu-group {
+  position: relative;
+}
+
+.menu-parent {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 200px;
+  display: none;
+  z-index: 100;
+}
+
+.submenu.active {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: #f5f5f5;
+  color: #C60010;
+}
+
+/* ==================== 모바일 메뉴 ==================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+    padding: 90px 20px 30px;
+    transition: left 0.4s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 999;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+
+  .header-left {
+    height: 52px;
+    gap: 9px;
+  }
+
+  .header-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+  }
+
+  .header-title .header-subtitle {
+    font-size: 12.2px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ==================== HERO ==================== */
+.program-hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #C60010;
+  color: white;
+}
+
+.program-title {
+  font-weight: 700;
+  margin: 0;
+  font-size: clamp(26px, 6vw, 46px);
   line-height: 1.2;
+}
+
+.program-subtitle {
+  font-size: clamp(15px, 3.5vw, 20px);
+  margin-top: 16px;
+  opacity: 0.95;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== 공통 섹션 ==================== */
+.section-block {
+  width: 100%;
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+/* 모바일에서는 제목 중앙 정렬 */
+@media (max-width: 767px) {
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.section-text {
+  line-height: 1.7;
+  font-size: 17px;
+  color: #444;
+}
+
+/* ==================== 특징 카드 ==================== */
+.feature-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .feature-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card-icon img {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 16px;
+}
+
+.card-large-icon .card-icon img {
+  width: 92px;
+  height: auto;
+}
+
+.card-text h4 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.card-text p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ==================== 커리큘럼 ==================== */
+.curriculum-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 18px 0;
+  color: #C60010;
+}
+
+.curriculum-list p {
+  margin: 10px 0;
+  font-size: 16.5px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.curriculum-list p::before {
+  content: "•";
+  color: #C60010;
+  font-size: 22px;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+}
+
+/* ==================== 지원 안내 ==================== */
+.section-block ul {
+  list-style: none;
+}
+
+.section-block li {
+  padding: 10px 0;
+  font-size: 16.5px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 14px;
+  margin-top: 80px;
+}
+
+/* ==================== 반응형 보완 ==================== */
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 14px;
+  }
+  
+  .program-hero {
+    padding: 60px 16px;
+  }
 }
