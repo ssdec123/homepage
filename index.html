@@ -12,18 +12,25 @@
 
 <header class="header">
   <div class="header-title">
-    <h1>SSDEC <br> 서강시스템반도체설계교육센터</h1>
+    <h1>SSDEC <br> 서강 시스템반도체 설계교육센터</h1>
     <p class="header-subtitle">Sogang SoC Design and Education Center</p>
   </div>
-
-   <!-- 햄버거 버튼 추가 -->
+  <!-- 햄버거 버튼 추가 -->
   <button class="hamburger">☰</button>
   
   <nav class="nav">
-    <a href="pages/about.html">센터안내</a>
-    <a href="pages/course.html">교육과정</a>
+    <a href="#">센터안내</a>
+     <!-- 교육과정 + 하위메뉴를 묶어서 그룹으로 만들기 -->
+  <div class="menu-group">
+    <button class="menu-parent">교육과정 ▼</button>
+
+    <div class="submenu">
+      <a href="class/global.html">글로벌 반도체 교육과정</a>
+      <a href="class/soc.html">SoC 설계 교육과정</a>
+    </div>
+  </div>
     <a href="#">메뉴3</a>
-    <a href="https://www.sogang.ac.kr">서강대학교</a>
+    <a href="www.sogang.ac.kr">서강대학교</a>
   </nav>
 </header>
 
@@ -62,8 +69,6 @@
   <footer class="footer">
     © 2026 My Website
   </footer>
-
-  
 <script>
   const ham = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav');
@@ -71,7 +76,18 @@
   ham.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
-</script>
 
+  // 세부 메뉴(아코디언) 기능
+  const parentMenu = document.querySelector('.menu-parent');
+  const submenu = document.querySelector('.submenu');
+
+  if (parentMenu) {
+    parentMenu.addEventListener('click', () => {
+      submenu.classList.toggle('active');
+      parentMenu.classList.toggle('active'); // ← 강조효과 주기
+    });
+  }
+</script>
 </body>
 </html>
+
