@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>글로벌 반도체 교육과정 - SSDEC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="global.css"> 
+</head>
+<body>
+
+<header class="header">
+  <div class="header-title">
+    <h1>글로벌 반도체 교육과정</h1>
+    <p class="header-subtitle">Global Semiconductor Education Program</p>
+  </div>
+
+  <button class="hamburger">☰</button>
+
+  <nav class="nav">
+    <a href="../index.html">센터안내</a>
+
+    <div class="menu-group">
+      <button class="menu-parent">교육과정 ▼</button>
+      <div class="submenu">
+        <a href="global.html">글로벌 반도체 교육과정</a>
+        <a href="soc.html">SoC 설계 교육과정</a>
+      </div>
+    </div>
+
+    <a href="#">메뉴3</a>
+    <a href="https://www.sogang.ac.kr">서강대학교</a>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="program-hero" style="padding:60px 20px; text-align:center; background:#C60010; color:#fff;">
+  <h2 class="program-title">
+    글로벌 반도체 교육과정
+  </h2>
+  <p style="font-size:18px; margin-top:12px;">
+    반도체 산업을 이해하고, 글로벌 경쟁력을 갖춘 설계 인재 양성 과정
+  </p>
+</section>
+
+
+<!-- INTRO SECTION -->
+<section class="content" style="max-width:900px; margin:40px auto;">
+  <h3 style="font-size:24px; margin-bottom:10px;">교육 개요</h3>
+  <p>
+    글로벌 반도체 교육과정은 반도체 산업 전반을 이해하고 실제 설계 프로세스를 체험하는 실무 중심의 교육 프로그램입니다.
+    시스템 반도체 트렌드, 공정 이해, 설계 실습 등을 다뤄 글로벌 수준의 반도체 엔지니어로 성장할 수 있게 돕습니다.
+  </p>
+</section>
+
+
+<!-- KEY FEATURES / CARDS -->
+<section class="content" style="max-width:1000px; margin:40px auto;">
+  <h3 style="font-size:24px; margin-bottom:20px;">이 과정의 특징</h3>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px;">
+    <div class="card">
+      <h4>글로벌 커리큘럼</h4>
+      <p>해외 반도체 트렌드와 최신 기술 기반 교육</p>
+    </div>
+
+    <div class="card">
+      <h4>실습 중심 프로젝트</h4>
+      <p>EDA 기반 설계 실습 및 Mini Project 수행</p>
+    </div>
+
+    <div class="card">
+      <h4>전문 강사진</h4>
+      <p>반도체 기업 및 대학 전문가 직접 참여</p>
+    </div>
+
+    <div class="card">
+      <h4>취업 연계 가능</h4>
+      <p>협력 기업 및 유관기관 취업 지원</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CURRICULUM SECTION -->
+<section class="content" style="max-width:900px; margin:60px auto;">
+  <h3 style="font-size:24px; margin-bottom:20px;">커리큘럼</h3>
+
+  <div style="border-left:3px solid #C60010; padding-left:20px;">
+    <p><strong>1~2주차:</strong> 반도체 산업 이해 / SoC 개론</p>
+    <p><strong>3~4주차:</strong> 디지털 회로 / RTL 설계</p>
+    <p><strong>5~6주차:</strong> 논리합성 / 타이밍 분석</p>
+    <p><strong>7~8주차:</strong> P&R 흐름 및 실습</p>
+    <p><strong>9~10주차:</strong> Sign-off 개념 / ECO</p>
+    <p><strong>11~12주차:</strong> Mini Project 및 발표</p>
+  </div>
+</section>
+
+
+<!-- APPLY SECTION -->
+<section class="content" style="max-width:900px; margin:60px auto;">
+  <h3 style="font-size:24px;">지원 안내</h3>
+  <ul>
+    <li>지원 대상: 반도체 진로 희망자 또는 기초 지식 보유자</li>
+    <li>모집 일정: 추후 공지</li>
+    <li>교육 장소: 서강대학교 판교캠퍼스<br>경기도 성남시 수정구 금토로80번길 56 3층</li>
+    <li>문의: ssdec.master@sogang.ac.kr</li>
+  </ul>
+</section>
+
+
+<footer class="footer">
+  © 2026 SSDEC
+</footer>
+
+<script>
+  const ham = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+
+  ham.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  const parentMenu = document.querySelector('.menu-parent');
+  const submenu = document.querySelector('.submenu');
+
+  if (parentMenu) {
+    parentMenu.addEventListener('click', () => {
+      submenu.classList.toggle('active');
+      parentMenu.classList.toggle('active');
+    });
+  }
+</script>
+
+</body>
+</html>
